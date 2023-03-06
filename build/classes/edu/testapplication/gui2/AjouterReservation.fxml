@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="553.0" prefWidth="753.0" style="-fx-background-color: #12477A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.AjouterReservationController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="-86.0" prefHeight="200.0" prefWidth="761.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="227.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation Evenement ">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Label layoutX="152.0" layoutY="236.0" text="Nom :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="316.0" text="Nbr Persone :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="288.0" layoutY="237.0" promptText="Nom" style="-fx-background-color: transparent; -fx-border-color: #F0F2F6; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="nbrp" layoutX="288.0" layoutY="310.0" promptText="Nbr Persone" style="-fx-background-color: transparent; -fx-border-color: #F0F2F6; -fx-border-width: 0px 0px 2px 0px;" />
+      <Button fx:id="reserver" layoutX="487.0" layoutY="475.0" mnemonicParsing="false" onAction="#add" prefHeight="37.0" prefWidth="92.0" style="-fx-background-color: #27ae60;" text="Reserver !" textFill="WHITE" />
+      <Button fx:id="retourr" layoutX="610.0" layoutY="468.0" mnemonicParsing="false" onAction="#listeres" prefHeight="37.0" prefWidth="83.0" style="-fx-background-color: #27ae60;" text="Retour" textFill="WHITE" />
+      <Label fx:id="mylabel" layoutX="153.0" layoutY="391.0" text="Evenement :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="mychoixbox" layoutX="288.0" layoutY="385.0" prefWidth="150.0" />
+      <Button fx:id="pdf" layoutX="602.0" layoutY="418.0" mnemonicParsing="false" onAction="#listepdf" prefHeight="37.0" prefWidth="83.0" style="-fx-background-color: #27ae60;" text="PDF" textFill="WHITE" />
+      <Label layoutX="152.0" layoutY="177.0" prefHeight="21.0" prefWidth="49.0" text="Cin    :" textFill="#fcf6f6" />
+      <TextField fx:id="cinres" editable="false" layoutX="284.0" layoutY="172.0" promptText="Cin" style="-fx-background-color: transparent; -fx-border-color: #F0F2F6; -fx-border-width: 0px 0px 2px 0px;" />
+   </children>
+</AnchorPane>

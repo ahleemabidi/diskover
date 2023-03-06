@@ -54,9 +54,9 @@
                   <Font name="Bell MT Bold" size="32.0" />
                </font>
             </Text>
-            <Button fx:id="tribtn" layoutX="860.0" layoutY="590.0" mnemonicParsing="false" onAction="#triusers" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #2FBB5E;" text="Trier" textFill="#eeeeee" />
+            <Button fx:id="tribtnn" layoutX="860.0" layoutY="590.0" mnemonicParsing="false" onAction="#triuser" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #2FBB5E;" text="Trier" textFill="#eeeeee" />
             <TextField fx:id="idcin1" layoutX="702.0" layoutY="142.0" prefHeight="33.0" prefWidth="143.0" promptText="Nom ou Prenom" style="-fx-background-color: transparent; -fx-border-color: #F0F2F6; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #ffffff;" />
-            <Button fx:id="tribtn1" layoutX="860.0" layoutY="143.0" mnemonicParsing="false" onAction="#rechercheuser" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #2FBB5E;" text="rechercher" textFill="#eeeeee" />
+            <Button fx:id="tribtnn1" layoutX="860.0" layoutY="143.0" mnemonicParsing="false" onAction="#recherche" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #2FBB5E;" text="rechercher" textFill="#eeeeee" />
             <Button fx:id="consultbtn" layoutX="726.0" layoutY="590.0" mnemonicParsing="false" onAction="#afficheruser" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #2FBB5E;" text="consulter" textFill="#eeeeee" />
             <Button fx:id="homebtn" layoutX="944.0" layoutY="681.0" mnemonicParsing="false" onAction="#adminnavigation" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: #41A0FF;" text="home" textFill="#eeeeee" />
             <AnchorPane layoutX="375.0" layoutY="202.0" prefHeight="346.0" prefWidth="610.0">
@@ -84,6 +84,7 @@
                </children>
             </AnchorPane>
             <Button fx:id="vehiculee" layoutX="785.0" layoutY="681.0" mnemonicParsing="false" onAction="#vehiculenavigation" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #41A0FF;" text="gestion vehicules" textFill="#eeeeee" />
+            <Button fx:id="btnevent" layoutX="609.0" layoutY="681.0" mnemonicParsing="false" onAction="#eventnavigation" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: #41A0FF;" text="gestion evennements" textFill="#eeeeee" />
          </children>
       </AnchorPane>
    </center>

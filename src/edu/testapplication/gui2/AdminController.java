@@ -74,11 +74,7 @@ public class AdminController implements Initializable {
     private TableColumn<Client, String> collpwd;
     private TableColumn<Client, String> collcin;
     @FXML
-    private Button tribtn;
-    @FXML
     private TextField idcin1;
-    @FXML
-    private Button tribtn1;
     @FXML
     private Button consultbtn;
     @FXML
@@ -103,6 +99,12 @@ public class AdminController implements Initializable {
     private Label cin;
     @FXML
     private Button vehiculee;
+    @FXML
+    private Button tribtnn;
+    @FXML
+    private Button tribtnn1;
+    @FXML
+    private Button btnevent;
 
     /**
      * Initializes the controller class.
@@ -244,57 +246,157 @@ sc.supprimer(c.getCin()) ;
 showsUsers() ;
     }
 
-    @FXML
-    private void triusers(ActionEvent event) {
-          Serviceclient sc= new Serviceclient() ; 
-          List<Client> clients = sc.getall();   
-List<Client>  tri_client = sc.trier(clients) ;
-ObservableList<Client> observableClients = FXCollections.observableList(tri_client);
-        
+//    private void triusers(ActionEvent event) {
+////          Serviceclient sc= new Serviceclient() ; 
+////          List<Client> clients = sc.getall();   
+////List<Client>  tri_client = sc.trier(clients) ;
+////ObservableList<Client> observableClients = FXCollections.observableList(tri_client);
+////        
+////
+////
+////table.setItems(observableClients) ; 
+////collcin.setCellValueFactory(new PropertyValueFactory<>("cin")) ; 
+////collnom.setCellValueFactory(new PropertyValueFactory<>("nom")) ;
+////collprenom.setCellValueFactory(new PropertyValueFactory<>("prenom")) ; 
+////collrole.setCellValueFactory(new PropertyValueFactory<>("role")) ;
+////collemail.setCellValueFactory(new PropertyValueFactory<>("email")) ; 
+////collpwd.setCellValueFactory(new PropertyValueFactory<>("pwd")) ; 
+// List<Client> c = new ArrayList();
+//        Serviceclient sc = new Serviceclient();
+//        listRes.getItems();
+//        c = sc.getall();
+//        List<Client>  tri_client = sc.trier(c) ;
+//        System.out.println(tri_client);
+//        //FormulaireR fr = new FormulaireR();
+//        
+//        //Res = sf.getOnebyId(fr.getId());
+//        
+//        int x = 0, y = 0;
+//        // listevent.getItems().addAll(even);
+//       // c.add(this.fr);
+//        for (Client e : tri_client) {
+//
+//            AnchorPane an = new AnchorPane();
+//            an.setLayoutX(x);
+//            an.setLayoutY(y);
+//
+//            Label cin = new Label(e.getCin());
+//            cin.setLayoutX(x + 4);
+//            cin.setLayoutY(y + 14);
+//         
+//            Label nom = new Label(e.getNom());
+//            nom.setLayoutX(x + 81);
+//            nom.setLayoutY(y + 14);
+//            Label prenom = new Label(e.getPrenom());
+//            prenom.setLayoutX(x + 163);
+//            prenom.setLayoutY(y + 14);
+//            Label role = new Label(e.getRole());
+//            role.setLayoutX(x + 253);
+//            role.setLayoutY(y + 14);
+//            Label email = new Label(e.getEmail());
+//            email.setLayoutX(x + 332);
+//            email.setLayoutY(y + 14);
+//            Label pwd = new Label(e.getPwd());
+//            pwd.setLayoutX(x + 547);
+//            pwd.setLayoutY(y + 14);
+//
+//
+//           // Button btnafficher = new Button("Affichage");
+//
+//            an.getChildren().addAll(cin, nom, prenom, role, email, pwd);
+//            ev.getChildren().addAll(an);
+//
+//            vbox.getChildren().add(an);
+//        // TODO
+//    }    
+// 
+//
+//
+//
+//
+//
+//
+//        
+//    }
 
-
-table.setItems(observableClients) ; 
-collcin.setCellValueFactory(new PropertyValueFactory<>("cin")) ; 
-collnom.setCellValueFactory(new PropertyValueFactory<>("nom")) ;
-collprenom.setCellValueFactory(new PropertyValueFactory<>("prenom")) ; 
-collrole.setCellValueFactory(new PropertyValueFactory<>("role")) ;
-collemail.setCellValueFactory(new PropertyValueFactory<>("email")) ; 
-collpwd.setCellValueFactory(new PropertyValueFactory<>("pwd")) ; 
- 
-
-
-
-
-
-
-        
-    }
-
-    @FXML
-    private void rechercheuser(ActionEvent event) {
-        Alert alert = new Alert(AlertType.ERROR);
-        if (idcin1.getText().isEmpty()) {
-             alert.setContentText("remplir le champ a rechercher");
-alert.showAndWait();
-return ; 
-        }
-Serviceclient sc= new Serviceclient() ; 
-          List<Client> clients = sc.getall(); 
-          List<Client> clients_recherché=sc.rechercher(clients, idcin1.getText()) ; 
-          ObservableList<Client> observableClients = FXCollections.observableList(clients_recherché);
-          table.setItems(observableClients) ; 
-collcin.setCellValueFactory(new PropertyValueFactory<>("cin")) ; 
-collnom.setCellValueFactory(new PropertyValueFactory<>("nom")) ;
-collprenom.setCellValueFactory(new PropertyValueFactory<>("prenom")) ; 
-collrole.setCellValueFactory(new PropertyValueFactory<>("role")) ;
-collemail.setCellValueFactory(new PropertyValueFactory<>("email")) ; 
-collpwd.setCellValueFactory(new PropertyValueFactory<>("pwd")) ; 
-          
-          
-
-           
-            
-    }
+//    private void rechercheuser(ActionEvent event) {
+//        Alert alert = new Alert(AlertType.ERROR);
+//        if (idcin1.getText().isEmpty()) {
+//             alert.setContentText("remplir le champ a rechercher");
+//alert.showAndWait();
+//return ; 
+//        }
+//Serviceclient sc= new Serviceclient() ; 
+//          List<Client> clients = sc.getall(); 
+//          List<Client> clients_recherché=sc.rechercher(clients, idcin1.getText()) ; 
+//          ObservableList<Client> observableClients = FXCollections.observableList(clients_recherché);
+//          table.setItems(observableClients) ; 
+//collcin.setCellValueFactory(new PropertyValueFactory<>("cin")) ; 
+//collnom.setCellValueFactory(new PropertyValueFactory<>("nom")) ;
+//collprenom.setCellValueFactory(new PropertyValueFactory<>("prenom")) ; 
+//collrole.setCellValueFactory(new PropertyValueFactory<>("role")) ;
+//collemail.setCellValueFactory(new PropertyValueFactory<>("email")) ; 
+//collpwd.setCellValueFactory(new PropertyValueFactory<>("pwd")) ; 
+//          
+//          
+//
+//     
+// List<Client> c = new ArrayList();
+//        Serviceclient sc = new Serviceclient();
+//        listRes.getItems();
+//        c = sc.getall();
+//        List<Client> clients_recherché=sc.rechercher(c, idcin1.getText()) ; 
+//        
+//        System.out.println(clients_recherché);
+//        //FormulaireR fr = new FormulaireR();
+//        
+//        //Res = sf.getOnebyId(fr.getId());
+//        
+//        int x = 0, y = 0;
+//        // listevent.getItems().addAll(even);
+//       // c.add(this.fr);
+//        for (Client e : clients_recherché) {
+//
+//            AnchorPane an = new AnchorPane();
+//            an.setLayoutX(x);
+//            an.setLayoutY(y);
+//
+//            Label cin = new Label(e.getCin());
+//            cin.setLayoutX(x + 4);
+//            cin.setLayoutY(y + 14);
+//         
+//            Label nom = new Label(e.getNom());
+//            nom.setLayoutX(x + 81);
+//            nom.setLayoutY(y + 14);
+//            Label prenom = new Label(e.getPrenom());
+//            prenom.setLayoutX(x + 163);
+//            prenom.setLayoutY(y + 14);
+//            Label role = new Label(e.getRole());
+//            role.setLayoutX(x + 253);
+//            role.setLayoutY(y + 14);
+//            Label email = new Label(e.getEmail());
+//            email.setLayoutX(x + 332);
+//            email.setLayoutY(y + 14);
+//            Label pwd = new Label(e.getPwd());
+//            pwd.setLayoutX(x + 547);
+//            pwd.setLayoutY(y + 14);
+//
+//
+//           // Button btnafficher = new Button("Affichage");
+//
+//            an.getChildren().addAll(cin, nom, prenom, role, email, pwd);
+//            ev.getChildren().addAll(an);
+//
+//            vbox.getChildren().add(an);
+//        // TODO
+//    }    
+// 
+//
+//
+//
+//
+//            
+//    }
     @FXML
     private void afficheruser(ActionEvent event) {
         
@@ -322,6 +424,77 @@ collpwd.setCellValueFactory(new PropertyValueFactory<>("pwd")) ;
     appStage.show() ;
     }
 
+    @FXML
+    private void triuser(ActionEvent event) {
+        List<Client> c = new ArrayList();
+        Serviceclient sc = new Serviceclient();
+        listRes.getItems();
+        c = sc.getall();
+        List<Client>  tri_client = sc.trier(c) ;
+        System.out.println(tri_client);
+        //FormulaireR fr = new FormulaireR();
+        
+        //Res = sf.getOnebyId(fr.getId());
+        
+        int x = 0, y = 0;
+        // listevent.getItems().addAll(even);
+       // c.add(this.fr);
+        for (Client e : tri_client) {
+
+            AnchorPane an = new AnchorPane();
+            an.setLayoutX(x);
+            an.setLayoutY(y);
+
+            Label cin = new Label(e.getCin());
+            cin.setLayoutX(x + 4);
+            cin.setLayoutY(y + 14);
+         
+            Label nom = new Label(e.getNom());
+            nom.setLayoutX(x + 81);
+            nom.setLayoutY(y + 14);
+            Label prenom = new Label(e.getPrenom());
+            prenom.setLayoutX(x + 163);
+            prenom.setLayoutY(y + 14);
+            Label role = new Label(e.getRole());
+            role.setLayoutX(x + 253);
+            role.setLayoutY(y + 14);
+            Label email = new Label(e.getEmail());
+            email.setLayoutX(x + 332);
+            email.setLayoutY(y + 14);
+            Label pwd = new Label(e.getPwd());
+            pwd.setLayoutX(x + 547);
+            pwd.setLayoutY(y + 14);
+
+
+           // Button btnafficher = new Button("Affichage");
+
+            an.getChildren().addAll(cin, nom, prenom, role, email, pwd);
+            ev.getChildren().addAll(an);
+
+            vbox.getChildren().add(an);
+        // TODO
+    }    
+ 
+
+
+
+    }
+
+    @FXML
+    private void recherche(ActionEvent event) {
+       
+   
+}
+
+    @FXML
+    private void eventnavigation(ActionEvent event) throws IOException {
+         Parent signup = FXMLLoader.load(getClass().getResource("gereEvent.fxml")) ; 
+        Scene signupscene = new Scene (signup) ; 
+        Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
+    appStage.setScene(signupscene) ; 
+    appStage.show() ;
+        
+    }
     }
         
     
