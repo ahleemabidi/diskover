@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.RepondreclientController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="154.0" fitWidth="190.0" layoutX="15.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/mail.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="150.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #12477A;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="40.0" prefHeight="34.0" prefWidth="555.0" text="Si vous avez recu un email d'un client veuillez  repondre !" textFill="#f5f0f0">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mailchauff" layoutX="140.0" layoutY="198.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #F0F2F6; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #ffffff;" />
+            <Label layoutX="40.0" layoutY="204.0" prefHeight="21.0" prefWidth="67.0" text="Email :" textFill="#f2efef">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mssgchauff" layoutX="147.0" layoutY="272.0" promptText="message" style="-fx-background-color: transparent; -fx-border-color: #F0F2F6; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #ffffff;" />
+            <Label layoutX="36.0" layoutY="289.0" prefHeight="26.0" prefWidth="80.0" text="Message :" textFill="#f2efef">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="encchauff" layoutX="314.0" layoutY="356.0" mnemonicParsing="false" onAction="#repondreclient" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #2fb82f;" text="envoyer" textFill="#f8f4f4" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

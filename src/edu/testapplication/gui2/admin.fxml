@@ -85,6 +85,7 @@
             </AnchorPane>
             <Button fx:id="vehiculee" layoutX="785.0" layoutY="681.0" mnemonicParsing="false" onAction="#vehiculenavigation" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #41A0FF;" text="gestion vehicules" textFill="#eeeeee" />
             <Button fx:id="btnevent" layoutX="609.0" layoutY="681.0" mnemonicParsing="false" onAction="#eventnavigation" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: #41A0FF;" text="gestion evennements" textFill="#eeeeee" />
+            <Button fx:id="btnres" layoutX="427.0" layoutY="681.0" mnemonicParsing="false" onAction="#resnavigation" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: #41A0FF;" text="gestion reservations" textFill="#eeeeee" />
          </children>
       </AnchorPane>
    </center>

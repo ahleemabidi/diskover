@@ -19,7 +19,7 @@
             <Font name="System Bold Italic" size="12.0" />
          </font></Button>
       <TextField fx:id="inputrechercheid" layoutX="14.0" layoutY="61.0" prefHeight="35.0" prefWidth="356.0" promptText="Search" />
-      <Button fx:id="rechercheid" layoutX="376.0" layoutY="61.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #3cba64;" text="Rechercher">
+      <Button fx:id="rechercherbtn" layoutX="376.0" layoutY="61.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #3cba64;" text="Rechercher">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>

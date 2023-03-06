@@ -203,7 +203,7 @@ private boolean isValidEmail(String email) {
 }
 
     @Override
-    public List<Client> getall() {
+   public List<Client> getall() {
         List<Client> listeclient = new ArrayList<>();
         String query = "SELECT * FROM user ";
         try{
@@ -228,6 +228,29 @@ private boolean isValidEmail(String email) {
         }
         return listeclient;
     }
+   public List<Client> getchauffeurs() {
+        List<Client> listeclient = new ArrayList<>();
+        String query = "SELECT nom, prenom, email FROM user WHERE role = 'chauffeur' ";
+        try{
+            Statement ste = cnx.createStatement();
+            ResultSet rs = ste.executeQuery(query);
+            while (rs.next()){
+                Client c = new Client();
+
+                c.setNom(rs.getString("nom"));
+                c.setPrenom(rs.getString("prenom"));
+                c.setEmail(rs.getString("email"));
+
+               
+                listeclient.add(c);
+            }
+        }
+        catch (SQLException e){
+            e.getMessage();
+        }
+        return listeclient;
+    }
+    
 
     
     public static List<Client> trier(List<Client> listc) {

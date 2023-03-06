@@ -28,7 +28,7 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Hyperlink>
-            <Button layoutX="86.0" layoutY="424.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="228.0" style="-fx-background-color: #2fb82f;" text="a propos nos reservation" textFill="#fcf1f1" />
+            <Button fx:id="repondreclientbtn" layoutX="86.0" layoutY="424.0" mnemonicParsing="false" onAction="#repondrenavigation" prefHeight="65.0" prefWidth="228.0" style="-fx-background-color: #2fb82f;" text="a propos nos reservation" textFill="#fcf1f1" />
             <Button layoutX="523.0" layoutY="424.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="212.0" style="-fx-background-color: #2fb82f;" text="a propos nos reclamation" textFill="#fcf1f1" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
                <image>

@@ -38,7 +38,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="56.0" layoutY="568.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #2fb82f;" text="a propos nos reservations" textFill="#f1f8f3">
+            <Button fx:id="btnres" layoutX="56.0" layoutY="568.0" mnemonicParsing="false" onAction="#reservation" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #2fb82f;" text="a propos nos reservations" textFill="#f1f8f3">
                <font>
                   <Font size="18.0" />
                </font>

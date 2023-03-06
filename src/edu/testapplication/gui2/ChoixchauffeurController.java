@@ -40,9 +40,7 @@ public class ChoixchauffeurController implements Initializable {
     private Hyperlink profilch ;
     private TextField  cintf ; 
     @FXML
-    private TextField idtf;
-    @FXML
-    private Label labelcin;
+    private Button repondreclientbtn;
   
 
     /**
@@ -74,6 +72,15 @@ public class ChoixchauffeurController implements Initializable {
     appStage.setScene(signupscene) ; 
     appStage.show() ;
         
+    }
+
+    @FXML
+    private void repondrenavigation(ActionEvent event) throws IOException {
+        Parent signup = FXMLLoader.load(getClass().getResource("repondreclient.fxml")) ; 
+        Scene signupscene = new Scene (signup) ; 
+        Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
+    appStage.setScene(signupscene) ; 
+    appStage.show() ;
     }
   
 

@@ -41,10 +41,8 @@ public class GestionMissionController implements Initializable {
     private ListView<Mission> liste;
     @FXML
     private Button butnvehicule;
-    @FXML
-    private TextField inputrechercheid;
-    @FXML
-    private Button rechercheid;
+    //@FXML
+//    private Button inputrechercheid1;
 
     @FXML
     private Button ajoutid;
@@ -54,6 +52,12 @@ public class GestionMissionController implements Initializable {
     private AnchorPane an;
     @FXML
     private VBox vbox;
+//    @FXML
+//    private TextField inputrechercheid;
+    @FXML
+    private TextField inputrechercheid;
+    @FXML
+    private Button rechercherbtn;
 
     /**
      * Initializes the controller class.
@@ -113,20 +117,11 @@ public class GestionMissionController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    private void rechercher(ActionEvent event) {
-        String matricule = inputrechercheid.getText();
-        ServiceMission sm = new ServiceMission();
-
-        List<Mission> resultatsRecherche = sm.recherche(matricule);
-        if (resultatsRecherche.isEmpty()) {
-            Alert a = new Alert(Alert.AlertType.ERROR, "Aucun résultat trouvé", ButtonType.OK);
-            a.showAndWait();
-        } else {
-            liste.setItems(FXCollections.observableArrayList(resultatsRecherche));
-        }
-
-    }
+   // @FXML
+//    private void rechercher(ActionEvent event) throws IOException {
+//       
+//
+//    }
 
     @FXML
     private void ajouter(ActionEvent event) throws IOException {
@@ -142,6 +137,20 @@ public class GestionMissionController implements Initializable {
     private void duree(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("calcul.fxml"));
         Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void rechercher(ActionEvent event) throws IOException {
+        String Matricule = rechercherbtn.getText();
+        ServiceMission sm = new ServiceMission();
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("RechercheMission.fxml"));
+        Parent root = loader.load();
+        RechercheMissionController vehiculeController = loader.getController();
+        vehiculeController.setMatricule(Matricule);
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
