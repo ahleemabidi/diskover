@@ -33,7 +33,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="594.0" layoutY="580.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="257.0" style="-fx-background-color: #2fb82f;" text="a propos nos reclamations" textFill="#f1f8f3">
+            <Button fx:id="rebctn" layoutX="594.0" layoutY="580.0" mnemonicParsing="false" onAction="#recnavigation" prefHeight="39.0" prefWidth="257.0" style="-fx-background-color: #2fb82f;" text="a propos nos reclamations" textFill="#f1f8f3">
                <font>
                   <Font size="18.0" />
                </font>

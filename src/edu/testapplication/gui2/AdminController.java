@@ -107,6 +107,12 @@ public class AdminController implements Initializable {
     private Button btnevent;
     @FXML
     private Button btnres;
+    @FXML
+    private Button btnres1;
+    @FXML
+    private TextField cinrec;
+    @FXML
+    private Button deletebtn1;
 
     /**
      * Initializes the controller class.
@@ -491,6 +497,59 @@ showsUsers() ;
 
     @FXML
     private void recherche(ActionEvent event) {
+        List<Client> c = new ArrayList();
+        Serviceclient sc = new Serviceclient();
+         c = sc.getall();
+         List<Client> c2 = new ArrayList();
+         c2=sc.rechercher(c,idcin1.getText()) ; 
+         System.out.println(c2);
+        //FormulaireR fr = new FormulaireR();
+        
+        //Res = sf.getOnebyId(fr.getId());
+        
+        int x = 0, y = 0;
+        // listevent.getItems().addAll(even);
+       // c.add(this.fr);
+        for (Client e : c2) {
+
+            AnchorPane an = new AnchorPane();
+            an.setLayoutX(x);
+            an.setLayoutY(y);
+
+            Label cin = new Label(e.getCin());
+            cin.setLayoutX(x + 4);
+            cin.setLayoutY(y + 14);
+         
+            Label nom = new Label(e.getNom());
+            nom.setLayoutX(x + 81);
+            nom.setLayoutY(y + 14);
+            Label prenom = new Label(e.getPrenom());
+            prenom.setLayoutX(x + 163);
+            prenom.setLayoutY(y + 14);
+            Label role = new Label(e.getRole());
+            role.setLayoutX(x + 253);
+            role.setLayoutY(y + 14);
+            Label email = new Label(e.getEmail());
+            email.setLayoutX(x + 332);
+            email.setLayoutY(y + 14);
+            Label pwd = new Label(e.getPwd());
+            pwd.setLayoutX(x + 547);
+            pwd.setLayoutY(y + 14);
+
+
+           // Button btnafficher = new Button("Affichage");
+
+            an.getChildren().addAll(cin, nom, prenom, role, email, pwd);
+            ev.getChildren().addAll(an);
+
+            vbox.getChildren().add(an);
+        // TODO
+    }    
+ 
+         
+         
+        
+        
        
    
 }
@@ -512,6 +571,32 @@ showsUsers() ;
         Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
     appStage.setScene(signupscene) ; 
     appStage.show() ;
+    }
+
+    @FXML
+    private void recbtnnavigation(ActionEvent event) throws IOException {
+          Parent signup = FXMLLoader.load(getClass().getResource("Back.fxml")) ; 
+        Scene signupscene = new Scene (signup) ; 
+        Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
+    appStage.setScene(signupscene) ; 
+    appStage.show() ;
+    }
+
+    @FXML
+    private void recuperer(ActionEvent event) {
+//          List<Client> c = new ArrayList();
+//        Serviceclient sc= new Serviceclient() ; 
+        Client c = new Client() ; 
+        Serviceclient sc= new Serviceclient() ; 
+        c=sc.getOneById(cinrec.getText())  ; 
+         idcin.setText(c.getCin());
+                idnom.setText(c.getNom());
+                        idprenom.setText(c.getPrenom());
+                               choicebox2.setValue(c.getRole());
+                               
+                        idemail.setText(c.getEmail());
+                          idpassword.setText(c.getPwd());
+        
     }
     }
         

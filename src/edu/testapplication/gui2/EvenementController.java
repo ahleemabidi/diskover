@@ -68,7 +68,7 @@ public class EvenementController implements Initializable {
         vBox.setPrefSize(150, 150);
         
         // Chargement de l'image
-        String imagePath = "C:\\Users\\ramzi\\OneDrive\\Documents\\NetBeansProjects\\discover6\\src\\img\\"+i+".png"; // chemin d'accès relatif à l'image
+        String imagePath = "C:\\Users\\lenovo\\Desktop\\PIDEV\\Disk-over-user\\src\\images\\"+i+".png"; // chemin d'accès relatif à l'image
         Image image = new Image(new File(imagePath).toURI().toString());
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(200); // ajuste la largeur à 100 pixels
@@ -94,14 +94,14 @@ public class EvenementController implements Initializable {
         dateLabel.setAlignment(Pos.CENTER);
         
         
-        String nbr = String.valueOf(event.getNbrplacevehicule());
-        Label nbrLabel = new Label(nbr);
-        nbrLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
-        nbrLabel.setPrefWidth(150);
-        nbrLabel.setMinWidth(150);
-        nbrLabel.setPrefHeight(40);
-        nbrLabel.setMinHeight(40);
-        nbrLabel.setAlignment(Pos.CENTER);
+//        String nbr = String.valueOf(event.getNbrplacevehicule());
+//        Label nbrLabel = new Label(nbr);
+//        nbrLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
+//        nbrLabel.setPrefWidth(150);
+//        nbrLabel.setMinWidth(150);
+//        nbrLabel.setPrefHeight(40);
+//        nbrLabel.setMinHeight(40);
+//        nbrLabel.setAlignment(Pos.CENTER);
         
         
         String prix = String.valueOf(event.getPrixvehiculeevent());
@@ -114,7 +114,7 @@ public class EvenementController implements Initializable {
         prixLabel.setAlignment(Pos.CENTER);
 
 
-        vBox.getChildren().addAll(imageView,nomLabel, dateLabel,nbrLabel,prixLabel);
+        vBox.getChildren().addAll(imageView,nomLabel, dateLabel,prixLabel);
 
         return vBox;
     }

@@ -41,6 +41,8 @@ public class ChoixchauffeurController implements Initializable {
     private TextField  cintf ; 
     @FXML
     private Button repondreclientbtn;
+    @FXML
+    private Button recbtn;
   
 
     /**
@@ -77,6 +79,15 @@ public class ChoixchauffeurController implements Initializable {
     @FXML
     private void repondrenavigation(ActionEvent event) throws IOException {
         Parent signup = FXMLLoader.load(getClass().getResource("repondreclient.fxml")) ; 
+        Scene signupscene = new Scene (signup) ; 
+        Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
+    appStage.setScene(signupscene) ; 
+    appStage.show() ;
+    }
+
+    @FXML
+    private void recnavigation(ActionEvent event) throws IOException {
+         Parent signup = FXMLLoader.load(getClass().getResource("Reclamation.fxml")) ; 
         Scene signupscene = new Scene (signup) ; 
         Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
     appStage.setScene(signupscene) ; 

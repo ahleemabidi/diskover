@@ -36,6 +36,8 @@ public class ChoixutilisateurController implements Initializable {
     private Button btnevent;
     @FXML
     private Button btnres;
+    @FXML
+    private Button rebctn;
 
     /**
      * Initializes the controller class.
@@ -84,6 +86,15 @@ public class ChoixutilisateurController implements Initializable {
     @FXML
     private void reservation(ActionEvent event) throws IOException {
         Parent signup = FXMLLoader.load(getClass().getResource("RemplirForm.fxml")) ; 
+        Scene signupscene = new Scene (signup) ; 
+        Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
+    appStage.setScene(signupscene) ; 
+    appStage.show() ;
+    }
+
+    @FXML
+    private void recnavigation(ActionEvent event) throws IOException {
+         Parent signup = FXMLLoader.load(getClass().getResource("Reclamation.fxml")) ; 
         Scene signupscene = new Scene (signup) ; 
         Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
     appStage.setScene(signupscene) ; 
