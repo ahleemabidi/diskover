@@ -79,7 +79,7 @@ public class ClientMoyenneController implements Initializable {
         Button reserverButton = new Button("Réserver");
         reserverButton.setOnAction(event -> {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Categorie.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("RemplirForm.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

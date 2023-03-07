@@ -7,6 +7,7 @@ package edu.testapplication.gui2;
 
 import edu.esprit.services.ServiceMission;
 import edu.esprit.utils.datasource;
+import java.awt.Color;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -34,6 +35,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javax.swing.JFrame;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.data.general.DefaultPieDataset;
 
 /**
  * FXML Controller class
@@ -84,28 +91,41 @@ public class CalculController implements Initializable {
     }
 
     private void afficherPieChart(Map<Date, Integer> dureesParDate) {
-//        int totalDuree = 0;
-//        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
-//        for (Map.Entry<Date, Integer> entry : dureesParDate.entrySet()) {
-//            Date date = entry.getKey();
-//            int duree = entry.getValue();
-//            totalDuree += duree;
-//            pieChartData.add(new PieChart.Data(date.toString(), duree));
-//        }
-//        pieChartData.add(new PieChart.Data("Durée restante", 3600 - totalDuree));
-//        pie.setData(pieChartData);
-        int totalDuree = 0;
-        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+int totalDuree = 0;
+        DefaultPieDataset dataset = new DefaultPieDataset();
         for (Map.Entry<Date, Integer> entry : dureesParDate.entrySet()) {
             Date date = entry.getKey();
             int duree = entry.getValue();
             totalDuree += duree;
-            pieChartData.add(new PieChart.Data(date.toString(), duree));
-            pieChartData.add(new PieChart.Data(date.toString() + " - Durée restante", 3600 - duree));
+            int dureeRestante = 3600 - duree;
+            dataset.setValue(date.toString(), duree);
+            dataset.setValue(date.toString() + " (restante)", dureeRestante);
         }
-//        pieChartData.add(new PieChart.Data("Durée totale", totalDuree));
-//        pieChartData.add(new PieChart.Data("Durée restante", 3600 - totalDuree));
-        pie.setData(pieChartData);
+
+        JFreeChart chart = ChartFactory.createPieChart(
+                "Mission Durations", // chart title
+                dataset, // data
+                true, // include legend
+                true, // tooltips
+                false // urls
+        );
+
+        Color realDurationColor = new Color(0, 128, 0); // Vert foncé
+        Color remainingDurationColor = new Color(255, 0, 0); // Rouge
+        PiePlot piePlot = (PiePlot) chart.getPlot();
+
+        piePlot.setSectionPaint("Durée réelle", realDurationColor);
+        piePlot.setSectionPaint("Durée restante", remainingDurationColor);
+        ChartPanel chartPanel = new ChartPanel(chart);
+
+// Display the chart
+        JFrame frame = new JFrame("Pie Chart");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(chartPanel);
+        frame.pack();
+        frame.setVisible(true);
+
     }
+    
 
 }

@@ -139,6 +139,7 @@ public class RemplirFormController implements Initializable {
         FormulaireR fr = new FormulaireR(nom, tlp, mail, nbr, type, categ, depart, destination, opt);
         ServiceFormulaire sform = new ServiceFormulaire();
         sform.ajouter(fr);
+        sform.notifier("nouvelle notification","reservation ajoutée") ;  
         
     FXMLLoader loader = new FXMLLoader(getClass().getResource("InfoReservation.fxml"));
     Parent root = loader.load();
@@ -151,6 +152,7 @@ InfoReservationController c2=  loader.getController();
     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     stage.setScene(scene);
     stage.show();
+    
         //JOptionPane.showConfirmDialog(null, "Reservation enregistrée !");
         //sform.notifier("Nouvelle notification ", "Reservation enregistrée ! ");
 
