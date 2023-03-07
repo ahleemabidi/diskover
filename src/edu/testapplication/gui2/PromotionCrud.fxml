@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="569.0" prefWidth="880.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.PromotionCrudController">
+    <stylesheets>
+        <URL value="@promotioncrud.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="182.0" prefHeight="576.0" prefWidth="708.0" style="-fx-background-color: #12477A;">
+         <children>
+            <TextField fx:id="search" onMouseClicked="#rechercheEq" prefHeight="31.0" prefWidth="268.0" promptText="Recherche" style="-fx-background-color: transparent;" />
+            <TableView fx:id="TableView1" onMouseClicked="#selectO" prefHeight="244.0" prefWidth="701.0" style="-fx-background-color: transparent;">
+               <columns>
+                  <TableColumn fx:id="nomColumn" prefWidth="61.0" text="Nom" />
+                  <TableColumn fx:id="dureeColumn1" prefWidth="62.0" text="Duree" />
+                  <TableColumn fx:id="prixAVColumn" prefWidth="83.0" text="Prix Avant" />
+                  <TableColumn fx:id="pourColumn" prefWidth="62.0" text="\%" />
+                  <TableColumn fx:id="prixAPColumn11" prefWidth="89.0" text="Prix Apres" />
+                  <TableColumn fx:id="idProcolumn" prefWidth="89.0" text="ID" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnback" mnemonicParsing="false" onAction="#gomenu" prefHeight="31.0" prefWidth="71.0" style="-fx-background-color: #27ae60;" text="Menu" textFill="#eee5e5" />
+         </children></VBox>
+      <Button fx:id="deleteoffre" layoutX="407.0" layoutY="275.0" mnemonicParsing="false" onAction="#deleteOffre" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #27ae60;" text="Supprimer" textFill="#f5f5f5" />
+      <Button fx:id="modifierroffre" layoutX="300.0" layoutY="277.0" mnemonicParsing="false" onAction="#Update" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #27ae60;" text="Modifier" textFill="#ebe4e4" />
+      <Button fx:id="ajouteroffre" layoutX="535.0" layoutY="272.0" mnemonicParsing="false" onAction="#ajouterOffre" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #27ae60;" text="Ajouter" textFill="#f8f6f6" />
+      <TextField fx:id="txtAvant" layoutX="80.0" layoutY="274.0" prefHeight="31.0" prefWidth="92.0" promptText="prix Avant" style="-fx-background-color: transparent;" />
+      <TextField fx:id="txtnom" layoutX="79.0" layoutY="155.0" prefHeight="31.0" prefWidth="109.0" promptText="nom" style="-fx-background-color: transparent;" />
+      <TextField fx:id="txtpour" layoutX="93.0" layoutY="331.0" prefHeight="31.0" prefWidth="92.0" promptText="poucentage" style="-fx-background-color: transparent;" />
+      <TextField fx:id="txtApres" layoutX="79.0" layoutY="383.0" prefHeight="31.0" prefWidth="92.0" promptText="prixApres" style="-fx-background-color: transparent;" />
+      <TextField fx:id="txtido" layoutX="81.0" layoutY="443.0" prefHeight="31.0" prefWidth="98.0" promptText="Offre" style="-fx-background-color: transparent;" />
+      <TextField fx:id="txtduree1" layoutX="84.0" layoutY="211.0" prefHeight="31.0" prefWidth="92.0" promptText="duree" style="-fx-background-color: trznsparent;" />
+      <TextArea fx:id="idtxt" layoutX="46.0" layoutY="40.0" opacity="0.0" prefHeight="31.0" prefWidth="109.0" />
+      <TableView fx:id="tabp" layoutX="290.0" layoutY="345.0" prefHeight="98.0" prefWidth="334.0" style="-fx-background-color: transparent;">
+         <columns>
+            <TableColumn fx:id="dureeoColumn" prefWidth="163.0" text="Duree" />
+            <TableColumn fx:id="descColumn" prefWidth="168.0" text="Description" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="37.0" fitWidth="179.0" layoutX="3.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="7.0" layoutY="111.0" prefHeight="20.0" prefWidth="168.0" text="Ajouter une promotion :">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="162.0" prefHeight="20.0" prefWidth="46.0" text="Nom :">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="216.0" prefHeight="20.0" prefWidth="62.0" text="Duree :">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1.0" layoutY="281.0" prefHeight="20.0" prefWidth="79.0" text="Prix_avant :">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="337.0" prefHeight="20.0" prefWidth="92.0" text="Pourcentage :">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="389.0" prefHeight="20.0" prefWidth="92.0" text="PrixApres :">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="449.0" prefHeight="20.0" prefWidth="71.0" text="Offre :">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

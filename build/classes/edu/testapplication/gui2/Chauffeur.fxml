@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="442.0" prefWidth="509.0" style="-fx-background-color: #12477A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.ChauffeurController">
+<AnchorPane id="AnchorPane" prefHeight="473.0" prefWidth="618.0" style="-fx-background-color: #12477A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.ChauffeurController">
    <children>
       <Button fx:id="ajoutchauff" layoutX="209.0" layoutY="81.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="35.0" prefWidth="81.0" style="-fx-background-color: #3cba64;" text="Ajouter">
          <font>
@@ -27,17 +27,17 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="304.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="95.0" fitWidth="150.0" layoutX="509.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/lgog.png" />
+            <Image url="@../../../images/image-removebg-preview%20(30).png" />
          </image>
       </ImageView>
       <ImageView fitHeight="117.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/Capture_d_écran_2023-02-28_194852-removebg-preview%20(1).png" />
+            <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n.png" />
          </image>
       </ImageView>
-      <ScrollPane layoutX="17.0" layoutY="132.0" prefHeight="271.0" prefWidth="479.0">
+      <ScrollPane layoutX="86.0" layoutY="167.0" prefHeight="271.0" prefWidth="479.0">
          <content>
             <AnchorPane fx:id="an" prefHeight="260.0" prefWidth="376.0">
                <children>

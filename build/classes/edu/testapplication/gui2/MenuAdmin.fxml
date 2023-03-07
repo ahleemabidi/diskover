@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #12477A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.MenuAdminController">
+   <children>
+      <Button fx:id="btnOffreA" layoutX="399.0" layoutY="112.0" mnemonicParsing="false" onAction="#ofrreAdmin" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: #27ae60;" text="Offre" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnPromoA" layoutX="547.0" layoutY="252.0" mnemonicParsing="false" onAction="#promoAdmin" prefHeight="37.0" prefWidth="104.0" style="-fx-background-color: #27ae60;" text="Promotion" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <BorderPane layoutY="-3.0" prefHeight="409.0" prefWidth="250.0" style="-fx-background-color: WHITE;">
+         <top>
+            <ImageView fitHeight="44.0" fitWidth="255.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n%20(1).png" />
+               </image>
+            </ImageView>
+         </top>
+         <center>
+            <ImageView fitHeight="203.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../images/2.jpg" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <Text fill="#f5f5f5" layoutX="259.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue dans l'espace des offres et promotions" textAlignment="CENTER" wrappingWidth="413.1298828125">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="67.0" fitWidth="97.0" layoutX="303.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/earn_money.782fa888.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="75.0" layoutX="466.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/marketing_tools.37d5d120.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

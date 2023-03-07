@@ -22,14 +22,14 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="461.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/lgog.png" />
+            <Image url="@../../../images/ecz.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="156.0" fitWidth="249.0" layoutX="206.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="93.0" fitWidth="182.0" layoutX="387.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/Capture_d_écran_2023-02-28_102534-removebg-preview%20(1).png" />
+            <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n.png" />
          </image>
       </ImageView>
    </children>

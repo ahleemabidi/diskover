@@ -23,7 +23,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="369.0" layoutY="384.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="198.0" style="-fx-background-color: #2fb82f;" text="a propos nos offres" textFill="#f1f8f3">
+            <Button fx:id="btnoffre" layoutX="369.0" layoutY="384.0" mnemonicParsing="false" onAction="#promooffre" prefHeight="39.0" prefWidth="198.0" style="-fx-background-color: #2fb82f;" text="a propos nos offres" textFill="#f1f8f3">
                <font>
                   <Font size="18.0" />
                </font>

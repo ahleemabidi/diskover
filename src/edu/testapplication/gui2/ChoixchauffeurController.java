@@ -43,6 +43,8 @@ public class ChoixchauffeurController implements Initializable {
     private Button repondreclientbtn;
     @FXML
     private Button recbtn;
+    @FXML
+    private Button missionbtn;
   
 
     /**
@@ -92,6 +94,16 @@ public class ChoixchauffeurController implements Initializable {
         Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
     appStage.setScene(signupscene) ; 
     appStage.show() ;
+    }
+
+    @FXML
+    private void missnavigation(ActionEvent event) throws IOException {
+         Parent signup = FXMLLoader.load(getClass().getResource("InterfaceChauffeur.fxml")) ; 
+        Scene signupscene = new Scene (signup) ; 
+        Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
+    appStage.setScene(signupscene) ; 
+    appStage.show() ;
+        
     }
   
 

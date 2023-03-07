@@ -13,18 +13,18 @@
 
 <AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="1010.0" style="-fx-background-color: #12477A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.VehiculeController">
    <children>
-      <Button fx:id="ajoutid" layoutX="859.0" layoutY="166.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #3cba64;" text="Ajouter">
+      <Button fx:id="ajoutid" layoutX="859.0" layoutY="166.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #3cba64;" text="Ajouter" textFill="#f2eeee">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
       <TextField fx:id="inputrechercheid" layoutX="14.0" layoutY="94.0" prefHeight="35.0" prefWidth="393.0" promptText="Search" />
-      <Button fx:id="rechercheid" layoutX="419.0" layoutY="94.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #3cba64;" text="Rechercher">
+      <Button fx:id="rechercheid" layoutX="419.0" layoutY="94.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #3cba64;" text="Rechercher" textFill="#fffbfb">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="afficherid" layoutX="859.0" layoutY="217.0" mnemonicParsing="false" onAction="#afficherCategorie" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #3cba64;" text="Afficher">
+      <Button fx:id="afficherid" layoutX="859.0" layoutY="217.0" mnemonicParsing="false" onAction="#afficherCategorie" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #3cba64;" text="Afficher" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
@@ -35,19 +35,19 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="mission" layoutX="281.0" layoutY="25.0" mnemonicParsing="false" onAction="#mission" prefHeight="39.0" prefWidth="193.0" style="-fx-background-color: #3cba64;" text="Missions &gt;&gt;">
+      <Button fx:id="mission" layoutX="281.0" layoutY="25.0" mnemonicParsing="false" onAction="#mission" prefHeight="39.0" prefWidth="193.0" style="-fx-background-color: #3cba64;" text="Missions &gt;&gt;" textFill="#fcf6f6">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="810.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/lgog.png" />
+            <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n%20(1).png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="105.0" fitWidth="184.0" layoutX="810.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="105.0" fitWidth="184.0" layoutX="847.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/Image1.png" />
+            <Image url="@../../../images/bleur-removebg-preview.jpg" />
          </image>
       </ImageView>
       <ScrollPane layoutX="26.0" layoutY="146.0" prefHeight="281.0" prefWidth="789.0">

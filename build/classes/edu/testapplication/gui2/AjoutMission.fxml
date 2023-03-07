@@ -6,47 +6,63 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="279.0" prefWidth="423.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.testapplication.gui2.AjoutMissionController">
+<AnchorPane id="AnchorPane" prefHeight="446.0" prefWidth="687.0" style="-fx-background-color: #12477A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.AjoutMissionController">
    <children>
-      <TextField fx:id="idchauff" layoutX="121.0" layoutY="103.0" prefHeight="35.0" prefWidth="247.0" promptText="Matricule" />
-      <TextField fx:id="desc" layoutX="121.0" layoutY="159.0" prefHeight="35.0" prefWidth="247.0" promptText="Description" />
-      <Label layoutX="33.0" layoutY="110.0" text="Matricule">
+      <TextField fx:id="idchauff" layoutX="358.0" layoutY="149.0" prefHeight="35.0" prefWidth="247.0" promptText="Matricule" style="-fx-background-color: transparent; -fx-border-color: #F0F2F6; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="desc" layoutX="358.0" layoutY="213.0" prefHeight="35.0" prefWidth="247.0" promptText="Description" style="-fx-background-color: transparent; -fx-border-color: #F0F2F6; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="238.0" layoutY="157.0" text="Matricule" textFill="#f5eded">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="27.0" layoutY="166.0" text="Description">
+      <Label layoutX="232.0" layoutY="221.0" prefHeight="27.0" prefWidth="94.0" text="Description" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="ajout" layoutX="50.0" layoutY="235.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="35.0" prefWidth="59.0" style="-fx-background-color: #3cba64;" text="Ajouter">
+      <Button fx:id="ajout" layoutX="370.0" layoutY="308.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #3cba64;" text="Ajouter" textFill="#f2ebeb">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="modif" layoutX="180.0" layoutY="235.0" mnemonicParsing="false" onAction="#modifier" prefHeight="35.0" prefWidth="64.0" style="-fx-background-color: #3cba64;" text="Modifier">
+      <Button fx:id="modif" layoutX="481.0" layoutY="308.0" mnemonicParsing="false" onAction="#modifier" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #3cba64;" text="Modifier" textFill="#e1dbdb">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="supprim" layoutX="302.0" layoutY="235.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #3cba64;" text="Supprimer">
+      <Button fx:id="supprim" layoutX="586.0" layoutY="308.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #3cba64;" text="Supprimer" textFill="#e1dddd">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnprev" layoutX="356.0" layoutY="28.0" mnemonicParsing="false" onAction="#prev" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #3cba64;" text="Prev">
+      <Button fx:id="btnprev" layoutX="599.0" layoutY="28.0" mnemonicParsing="false" onAction="#prev" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #3cba64;" text="Prev" textFill="#f8f0f0">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <ImageView fitHeight="44.0" fitWidth="200.0" layoutX="2.0" layoutY="6.0">
+      <ImageView fitHeight="44.0" fitWidth="200.0" layoutY="24.0">
          <image>
-            <Image url="@../../../../../../../Downloads/Capture_d_écran_2023-02-23_154715-removebg-preview.png" />
+            <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n.png" />
          </image>
       </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="446.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <ImageView fitHeight="72.0" fitWidth="171.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/image-removebg-preview%20(29).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="220.0" layoutY="28.0" prefHeight="35.0" prefWidth="247.0" text="Inserer les données :" textFill="#e4e1e1">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

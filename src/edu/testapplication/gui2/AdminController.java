@@ -113,6 +113,8 @@ public class AdminController implements Initializable {
     private TextField cinrec;
     @FXML
     private Button deletebtn1;
+    @FXML
+    private Button btnoff;
 
     /**
      * Initializes the controller class.
@@ -596,6 +598,16 @@ showsUsers() ;
                                
                         idemail.setText(c.getEmail());
                           idpassword.setText(c.getPwd());
+        
+    }
+
+    @FXML
+    private void offrenavigation(ActionEvent event) throws IOException {
+         Parent signup = FXMLLoader.load(getClass().getResource("MenuAdmin.fxml")) ; 
+        Scene signupscene = new Scene (signup) ; 
+        Stage appStage= (Stage)((Node)event.getSource()).getScene().getWindow() ; 
+    appStage.setScene(signupscene) ; 
+    appStage.show() ;
         
     }
     }

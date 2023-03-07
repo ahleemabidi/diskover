@@ -28,14 +28,14 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Hyperlink>
-            <Button fx:id="repondreclientbtn" layoutX="86.0" layoutY="424.0" mnemonicParsing="false" onAction="#repondrenavigation" prefHeight="65.0" prefWidth="228.0" style="-fx-background-color: #2fb82f;" text="a propos nos reservation" textFill="#fcf1f1" />
-            <Button fx:id="recbtn" layoutX="523.0" layoutY="424.0" mnemonicParsing="false" onAction="#recnavigation" prefHeight="62.0" prefWidth="212.0" style="-fx-background-color: #2fb82f;" text="a propos nos reclamation" textFill="#fcf1f1" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="repondreclientbtn" layoutX="31.0" layoutY="371.0" mnemonicParsing="false" onAction="#repondrenavigation" prefHeight="65.0" prefWidth="228.0" style="-fx-background-color: #2fb82f;" text="a propos nos reservation" textFill="#fcf1f1" />
+            <Button fx:id="recbtn" layoutX="616.0" layoutY="382.0" mnemonicParsing="false" onAction="#recnavigation" prefHeight="62.0" prefWidth="212.0" style="-fx-background-color: #2fb82f;" text="a propos nos reclamation" textFill="#fcf1f1" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/425868.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="539.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="616.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/image-removebg-preview%20(28).png" />
                </image>
@@ -44,6 +44,12 @@
             <ImageView fitHeight="32.0" fitWidth="160.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="missionbtn" layoutX="326.0" layoutY="471.0" mnemonicParsing="false" onAction="#missnavigation" prefHeight="62.0" prefWidth="212.0" style="-fx-background-color: #2fb82f;" text="mission chauffeur" textFill="#fcf1f1" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="366.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/image-removebg-preview%20(29).png" />
                </image>
             </ImageView>
          </children>

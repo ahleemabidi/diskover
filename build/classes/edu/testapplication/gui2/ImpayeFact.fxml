@@ -7,29 +7,41 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.testapplication.gui2.ImpayeFactController">
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.testapplication.gui2.ImpayeFactController">
    <children>
-      <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+      <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="573.0" prefWidth="805.0">
          <left>
-            <AnchorPane prefHeight="347.0" prefWidth="184.0" style="-fx-background-color: #12477A;" BorderPane.alignment="CENTER" />
-         </left>
-         <bottom>
-            <AnchorPane prefHeight="36.0" prefWidth="600.0" style="-fx-background-color: #12477A;" BorderPane.alignment="CENTER" />
-         </bottom>
-         <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="553.0" prefWidth="184.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9b3b3" height="68.0" layoutX="7.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="402.0" />
-                  <Label layoutX="83.0" layoutY="39.0" text="Votre Facture " />
+                  <ImageView fitHeight="91.0" fitWidth="166.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/333997974_725431422366658_1750111115337249527_n%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="173.0" layoutX="9.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/781791.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #12477A;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="263.0" layoutY="23.0" text="Votre Facture " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font></Label>
                   <DatePicker fx:id="datef" layoutX="104.0" layoutY="85.0" />
                   <ChoiceBox fx:id="bstatut" layoutX="104.0" layoutY="126.0" prefWidth="150.0" />
-                  <AnchorPane layoutY="165.0" prefHeight="57.0" prefWidth="423.0">
+                  <AnchorPane layoutX="81.0" layoutY="221.0" prefHeight="57.0" prefWidth="423.0">
                      <children>
                         <ListView prefHeight="102.0" prefWidth="422.0" />
                         <Label layoutX="8.0" layoutY="6.0" text="Votre reservation :" />
@@ -46,14 +58,27 @@
                               </ScrollPane>
                            </children>
                         </AnchorPane>
-                        <Button layoutX="112.0" layoutY="2.0" mnemonicParsing="false" text="Afficher" />
                      </children>
                   </AnchorPane>
-                  <Button fx:id="btncode" layoutX="357.0" layoutY="325.0" mnemonicParsing="false" onAction="#directQRcode" text="QRcode" />
-                  <Label layoutX="31.0" layoutY="89.0" text="Date" />
-                  <Label layoutX="31.0" layoutY="130.0" text="Statut" />
-                  <Button fx:id="btnenregistrer" layoutX="278.0" layoutY="325.0" mnemonicParsing="false" onAction="#ajouter" text="Enregistrer" />
-                  <TextField fx:id="tfnotes" layoutX="14.0" layoutY="284.0" prefHeight="38.0" prefWidth="392.0" />
+                  <Button fx:id="btncode" layoutX="469.0" layoutY="505.0" mnemonicParsing="false" onAction="#directQRcode" style="-fx-background-color: #27ae60;" text="QRcode" textFill="#ebe4e4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Button>
+                  <Label layoutX="31.0" layoutY="89.0" text="Date :" textFill="#f8f3f3">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font></Label>
+                  <Label layoutX="26.0" layoutY="129.0" text="Statut :" textFill="#eeebeb">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font></Label>
+                  <TextField fx:id="tfnotes" layoutX="104.0" layoutY="399.0" prefHeight="91.0" prefWidth="392.0" />
+                  <Label layoutX="26.0" layoutY="419.0" text="Note :" textFill="#eeebeb">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="449.0" layoutY="341.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: #27ae60;" text="Afficher" textFill="#fcf7f7" />
                </children>
             </AnchorPane>
          </center>
